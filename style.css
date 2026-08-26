@@ -1,102 +1,209 @@
+/* ==========================
+   JUDY ANN NECESARIO
+   Portfolio Library
+   Matches Main Portfolio
+========================== */
+
 :root{
 
---navy:#0B0F2B;
---blue:#0066FF;
---coral:#FF5A30;
---light:#F1F3F6;
+--gold:#C08A2A;
+--gold-light:#E3C06A;
+--gold-dark:#8F651B;
+
+--black:#080808;
+--cream:#F8F5F0;
 --white:#FFFFFF;
+--text:#3C3C3C;
+
+--shadow:0 12px 35px rgba(0,0,0,.12);
+--transition:.35s ease;
 
 }
 
 *{
+
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Montserrat',sans-serif;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
 }
 
 body{
 
-background:linear-gradient(180deg,#ffffff,#f7f9fc);
-color:var(--navy);
-
-}
-
-.portfolio-library{
-
-padding:100px 8%;
+font-family:'Poppins',sans-serif;
+background:var(--cream);
+color:var(--text);
+line-height:1.8;
 
 }
 
 .container{
 
-max-width:1250px;
+width:min(1180px,92%);
 margin:auto;
+
+}
+
+/* HEADER */
+
+.library-header{
+
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(0,0,0,.94);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(192,138,42,.25);
+
+}
+
+.library-header .container{
+
+height:82px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:14px;
+text-decoration:none;
+color:white;
+
+}
+
+.logo-box{
+
+width:46px;
+height:46px;
+border:1px solid var(--gold);
+display:grid;
+place-items:center;
+font-family:'Cormorant Garamond',serif;
+font-size:28px;
+color:var(--gold);
+
+}
+
+.logo-text h2{
+
+font-family:'Cormorant Garamond',serif;
+font-size:22px;
+font-weight:500;
+
+}
+
+.logo-text span{
+
+font-size:12px;
+color:#CFCFCF;
+
+}
+
+.back-btn{
+
+color:var(--gold);
+text-decoration:none;
+font-size:14px;
+display:flex;
+align-items:center;
+gap:8px;
+
+}
+
+/* HERO */
+
+.portfolio-library{
+
+padding:90px 0 110px;
 
 }
 
 .title-area{
 
+max-width:760px;
+margin:auto auto 70px;
 text-align:center;
-margin-bottom:70px;
 
 }
 
 .eyebrow{
 
-display:inline-block;
-padding:8px 18px;
-background:rgba(0,102,255,.08);
-color:var(--blue);
-border-radius:30px;
-font-size:.8rem;
-font-weight:700;
-letter-spacing:1px;
-margin-bottom:20px;
+color:var(--gold);
+letter-spacing:3px;
+text-transform:uppercase;
+font-size:.82rem;
+font-weight:600;
 
 }
 
 .title-area h1{
 
-font-size:3rem;
-font-weight:800;
-margin-bottom:20px;
+font-family:'Cormorant Garamond',serif;
+font-size:64px;
+line-height:1;
+color:#171717;
+margin:20px 0;
+
+}
+
+.gold-line{
+
+width:72px;
+height:3px;
+background:var(--gold);
+margin:22px auto;
 
 }
 
 .title-area p{
 
-max-width:760px;
-margin:auto;
-line-height:1.8;
-color:#5a6475;
+font-size:16px;
+color:#666;
 
 }
+
+/* GRID */
 
 .portfolio-grid{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:35px;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:30px;
 
 }
 
+/* CARD */
+
 .card{
 
+background:var(--white);
+border-radius:20px;
+overflow:hidden;
 text-decoration:none;
 color:inherit;
-background:white;
-border-radius:22px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(11,15,43,.08);
-transition:.35s;
+box-shadow:var(--shadow);
+transition:var(--transition);
+border:1px solid rgba(192,138,42,.12);
+display:flex;
+flex-direction:column;
 
 }
 
 .card:hover{
 
-transform:translateY(-12px);
-box-shadow:0 25px 50px rgba(0,102,255,.15);
+transform:translateY(-10px);
+box-shadow:0 25px 50px rgba(0,0,0,.18);
 
 }
 
@@ -112,13 +219,13 @@ overflow:hidden;
 width:100%;
 height:220px;
 object-fit:cover;
-transition:.5s;
+transition:.6s;
 
 }
 
 .card:hover img{
 
-transform:scale(1.06);
+transform:scale(1.08);
 
 }
 
@@ -127,76 +234,179 @@ transform:scale(1.06);
 position:absolute;
 top:18px;
 right:18px;
-background:var(--coral);
+background:rgba(8,8,8,.92);
 color:white;
-padding:8px 14px;
-border-radius:25px;
-font-size:.75rem;
-font-weight:700;
+padding:8px 15px;
+border-radius:999px;
+font-size:.76rem;
+font-weight:600;
 
 }
 
 .content{
 
-padding:28px;
+padding:30px;
+display:flex;
+flex-direction:column;
+flex:1;
 
 }
 
 .icon{
 
-width:58px;
-height:58px;
-background:rgba(0,102,255,.08);
-border-radius:16px;
-display:flex;
-align-items:center;
-justify-content:center;
-color:var(--blue);
-font-size:1.4rem;
-margin-bottom:20px;
+width:60px;
+height:60px;
+border-radius:18px;
+display:grid;
+place-items:center;
+background:rgba(192,138,42,.12);
+color:var(--gold);
+font-size:24px;
+margin-bottom:22px;
 
 }
 
 .content h3{
 
-font-size:1.35rem;
+font-family:'Cormorant Garamond',serif;
+font-size:34px;
+line-height:1.15;
 margin-bottom:14px;
-font-weight:700;
+color:#171717;
 
 }
 
 .content p{
 
-line-height:1.7;
-color:#626d7f;
-margin-bottom:24px;
+color:#666;
+margin-bottom:auto;
 
 }
 
 .view{
 
-font-weight:700;
-color:var(--blue);
+margin-top:28px;
+display:inline-flex;
+align-items:center;
+gap:10px;
+font-weight:600;
+color:var(--gold);
+transition:var(--transition);
 
 }
 
 .card:hover .view{
 
-color:var(--coral);
+gap:18px;
 
 }
 
+/* CTA */
+
+.cta-area{
+
+margin-top:70px;
+text-align:center;
+
+}
+
+.btn{
+
+display:inline-flex;
+align-items:center;
+gap:12px;
+padding:16px 34px;
+border-radius:999px;
+text-decoration:none;
+transition:var(--transition);
+font-size:14px;
+font-weight:500;
+
+}
+
+.btn.gold{
+
+background:var(--gold);
+color:white;
+box-shadow:0 8px 25px rgba(192,138,42,.35);
+
+}
+
+.btn.gold:hover{
+
+background:var(--gold-dark);
+transform:translateY(-4px);
+
+}
+
+/* FOOTER */
+
+footer{
+
+background:black;
+padding:28px 0;
+color:#BEBEBE;
+
+}
+
+.footer-content{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
+
+}
+
+.top-link{
+
+color:var(--gold);
+text-decoration:none;
+
+}
+
+/* RESPONSIVE */
+
 @media(max-width:768px){
+
+.library-header .container{
+
+height:auto;
+padding:18px 0;
+flex-direction:column;
+gap:16px;
+
+}
 
 .title-area h1{
 
-font-size:2.2rem;
+font-size:46px;
 
 }
 
 .portfolio-library{
 
-padding:70px 6%;
+padding:70px 0 90px;
+
+}
+
+.portfolio-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.content h3{
+
+font-size:30px;
+
+}
+
+.footer-content{
+
+justify-content:center;
+text-align:center;
 
 }
 
