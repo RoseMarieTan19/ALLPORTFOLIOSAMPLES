@@ -350,21 +350,15 @@ border-top:1px solid rgba(255,255,255,.08);
 @media(max-width:768px){
 
 .hero h1{
-
 font-size:48px;
-
 }
 
 .grid{
-
 grid-template-columns:1fr;
-
 }
 
 nav{
-
-display:none;
-
+width:280px;
 }
 
 }
