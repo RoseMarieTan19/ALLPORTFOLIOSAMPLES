@@ -234,6 +234,73 @@ background:var(--gold);
 color:#111;
 
 }
+html{
+scroll-behavior:smooth;
+}
+
+header{
+background:#111;
+padding:20px 0;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:relative;
+}
+
+.nav h2{
+color:var(--gold);
+font-family:"Cormorant Garamond",serif;
+font-size:34px;
+}
+
+.menu-toggle{
+background:none;
+border:none;
+color:white;
+font-size:24px;
+cursor:pointer;
+}
+
+nav{
+display:none;
+position:absolute;
+top:70px;
+right:0;
+background:#111;
+width:320px;
+border-radius:16px;
+padding:15px;
+box-shadow:0 20px 50px rgba(0,0,0,.35);
+}
+
+nav.show{
+display:flex;
+flex-direction:column;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+padding:14px;
+border-radius:8px;
+font-size:14px;
+transition:.3s;
+}
+
+nav a:hover{
+background:rgba(179,146,87,.15);
+color:var(--gold);
+}
+
+section[id]{
+scroll-margin-top:120px;
+}
 
 footer{
 
