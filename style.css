@@ -1,8 +1,8 @@
-/* ===============================
-   PORTFOLIO LIBRARY
-   Judy Ann Necesario
-   Matches Main Portfolio
-================================ */
+/* ==========================================
+   JUDY ANN NECESARIO
+   Portfolio Library
+   Matches Main Portfolio Branding
+========================================== */
 
 :root{
 
@@ -10,12 +10,13 @@
 --gold-light:#E3C06A;
 --gold-dark:#8F651B;
 
---black:#080808;
---cream:#F8F5F0;
+--cream:#FAF8F4;
 --white:#FFFFFF;
---text:#404040;
+--black:#151515;
+--text:#505050;
+--blue:#245BFF;
 
---shadow:0 18px 45px rgba(0,0,0,.12);
+--shadow:0 18px 45px rgba(0,0,0,.08);
 
 }
 
@@ -23,6 +24,10 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
@@ -47,19 +52,27 @@ margin:auto;
 
 position:sticky;
 top:0;
-background:rgba(0,0,0,.94);
-backdrop-filter:blur(12px);
-border-bottom:1px solid rgba(192,138,42,.25);
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(14px);
+border-bottom:1px solid rgba(0,0,0,.06);
 z-index:999;
 
 }
 
 .library-header .library-container{
 
+height:84px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-height:82px;
+
+}
+
+.library-brand{
+
+display:flex;
+align-items:center;
+gap:28px;
 
 }
 
@@ -69,46 +82,57 @@ display:flex;
 align-items:center;
 gap:14px;
 text-decoration:none;
-color:white;
+color:inherit;
 
 }
 
-.library-logo-box{
+.logo-box{
 
-width:46px;
-height:46px;
-border:1px solid var(--gold);
+width:48px;
+height:48px;
+background:var(--black);
+color:white;
 display:grid;
 place-items:center;
 font-family:'Cormorant Garamond',serif;
 font-size:28px;
-color:var(--gold);
+border-radius:10px;
 
 }
 
-.library-logo-text h2{
+.logo-text h2{
 
 font-family:'Cormorant Garamond',serif;
-font-size:22px;
-font-weight:500;
+font-size:24px;
+font-weight:600;
+color:var(--black);
 
 }
 
-.library-logo-text p{
+.logo-text p{
 
-font-size:12px;
-color:#CFCFCF;
+font-size:13px;
+color:#777;
 
 }
 
-.library-back{
+.library-label{
 
-color:var(--gold);
+font-size:13px;
+letter-spacing:2px;
+text-transform:uppercase;
+color:#888;
+
+}
+
+.back-link{
+
 text-decoration:none;
+color:var(--blue);
+font-weight:500;
 display:flex;
 align-items:center;
 gap:8px;
-font-size:14px;
 
 }
 
@@ -116,49 +140,56 @@ font-size:14px;
 
 .library-hero{
 
-padding:100px 0;
+padding:90px 0 70px;
 
 }
 
-.library-title{
+.hero-content{
 
-text-align:center;
 max-width:760px;
-margin:auto auto 70px;
 
 }
 
-.library-title span{
+.eyebrow{
 
-color:var(--gold);
-font-size:.82rem;
-letter-spacing:3px;
+color:var(--blue);
+font-size:.85rem;
 font-weight:600;
+letter-spacing:3px;
 
 }
 
-.library-title h1{
+.hero-content h1{
 
 font-family:'Cormorant Garamond',serif;
-font-size:64px;
-line-height:1;
+font-size:74px;
+line-height:.95;
 margin:18px 0;
-color:#171717;
+color:var(--black);
 
 }
 
-.library-line{
+.gold-line{
 
 width:70px;
 height:3px;
 background:var(--gold);
-margin:22px auto;
+margin-bottom:24px;
 
 }
 
-.library-title p{
+.hero-content p{
 
+font-size:17px;
 color:#666;
+
+}
+
+/* SECTION */
+
+.library-section{
+
+padding-bottom:90px;
 
 }
 
@@ -167,8 +198,8 @@ color:#666;
 .library-grid{
 
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:32px;
+grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+gap:30px;
 
 }
 
@@ -183,7 +214,6 @@ text-decoration:none;
 color:inherit;
 box-shadow:var(--shadow);
 transition:.35s;
-border:1px solid rgba(192,138,42,.12);
 display:flex;
 flex-direction:column;
 
@@ -195,19 +225,19 @@ transform:translateY(-10px);
 
 }
 
-.library-image{
+.card-image{
 
 position:relative;
 overflow:hidden;
 
 }
 
-.library-image img{
+.card-image img{
 
 width:100%;
-height:230px;
+height:220px;
 object-fit:cover;
-transition:.5s;
+transition:.45s;
 
 }
 
@@ -217,72 +247,75 @@ transform:scale(1.08);
 
 }
 
-.library-badge{
+.project-tag{
 
 position:absolute;
 top:18px;
 right:18px;
-background:#111;
-color:white;
+background:white;
+color:var(--blue);
 padding:8px 16px;
 border-radius:999px;
-font-size:.76rem;
+font-size:.78rem;
+font-weight:600;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
 
 }
 
-.library-content{
+.card-content{
 
-padding:30px;
+padding:28px;
 display:flex;
 flex-direction:column;
 flex:1;
 
 }
 
-.library-icon{
+.card-icon{
 
-width:60px;
-height:60px;
-background:rgba(192,138,42,.12);
-color:var(--gold);
+width:56px;
+height:56px;
+background:#EEF4FF;
+color:var(--blue);
 display:grid;
 place-items:center;
-border-radius:18px;
-font-size:24px;
-margin-bottom:22px;
+border-radius:16px;
+font-size:22px;
+margin-bottom:20px;
 
 }
 
-.library-content h3{
+.card-content h3{
 
 font-family:'Cormorant Garamond',serif;
 font-size:34px;
 line-height:1.15;
-margin-bottom:12px;
-color:#171717;
+color:var(--black);
+margin-bottom:14px;
 
 }
 
-.library-content p{
+.card-content p{
 
+font-size:15px;
 color:#666;
 margin-bottom:auto;
 
 }
 
-.library-view{
+.card-link{
 
 margin-top:26px;
-display:flex;
+display:inline-flex;
 align-items:center;
 gap:10px;
+color:var(--blue);
 font-weight:600;
-color:var(--gold);
 transition:.3s;
 
 }
 
-.library-card:hover .library-view{
+.library-card:hover .card-link{
 
 gap:18px;
 
@@ -290,31 +323,32 @@ gap:18px;
 
 /* CTA */
 
-.library-cta{
+.cta-wrapper{
 
 text-align:center;
 margin-top:70px;
 
 }
 
-.library-btn{
+.cta-button{
 
 display:inline-flex;
 align-items:center;
 gap:12px;
 padding:16px 34px;
-background:var(--gold);
+background:var(--blue);
 color:white;
 text-decoration:none;
 border-radius:999px;
+font-weight:500;
 transition:.35s;
 
 }
 
-.library-btn:hover{
+.cta-button:hover{
 
-background:var(--gold-dark);
 transform:translateY(-4px);
+background:#194BE6;
 
 }
 
@@ -322,13 +356,13 @@ transform:translateY(-4px);
 
 .library-footer{
 
-background:black;
+background:white;
+border-top:1px solid rgba(0,0,0,.08);
 padding:28px 0;
-margin-top:80px;
 
 }
 
-.library-footer .library-container{
+.footer-content{
 
 display:flex;
 justify-content:space-between;
@@ -338,16 +372,19 @@ gap:20px;
 
 }
 
-.library-footer p{
+.footer-content p{
 
-color:#BEBEBE;
+color:#777;
 
 }
 
-.library-footer a{
+.back-top{
 
-color:var(--gold);
 text-decoration:none;
+color:var(--blue);
+display:flex;
+align-items:center;
+gap:8px;
 
 }
 
@@ -364,9 +401,17 @@ gap:18px;
 
 }
 
-.library-title h1{
+.library-brand{
 
-font-size:46px;
+flex-direction:column;
+gap:14px;
+align-items:flex-start;
+
+}
+
+.hero-content h1{
+
+font-size:52px;
 
 }
 
@@ -376,7 +421,7 @@ grid-template-columns:1fr;
 
 }
 
-.library-footer .library-container{
+.footer-content{
 
 justify-content:center;
 text-align:center;
