@@ -231,35 +231,41 @@ margin-bottom:15px;
 
 }
 
-.buttons{
-
-margin-top:35px;
+.social-icons{
+margin-top:40px;
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
-gap:15px;
-
+gap:18px;
 }
 
-.buttons a{
-
-border:1px solid var(--gold);
-padding:14px 24px;
-border-radius:50px;
-text-decoration:none;
+.social-icons a{
+width:58px;
+height:58px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:50%;
+border:2px solid var(--gold);
 color:white;
-transition:.3s;
-
+font-size:22px;
+text-decoration:none;
+transition:.35s ease;
 }
 
-.buttons a:hover{
-
+.social-icons a:hover{
 background:var(--gold);
 color:#111;
+transform:translateY(-5px) scale(1.08);
+box-shadow:0 10px 25px rgba(179,146,87,.35);
+}
 
 }
 html{
 scroll-behavior:smooth;
+}
+section[id]{
+scroll-margin-top:110px;
 }
 
 header{
