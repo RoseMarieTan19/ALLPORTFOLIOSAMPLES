@@ -26,20 +26,18 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 <h2>JAN</h2>
 
-<nav>
+<button class="menu-toggle" id="menuToggle">
+<i class="fas fa-bars"></i>
+</button>
+
+<nav id="mobileMenu">
 
 <a href="https://rosemarietan19.github.io/JANecesario2026portfolio/">Home</a>
-
 <a href="#kajabi">Kajabi Website Management</a>
-
 <a href="#social">Social Media Support</a>
-
 <a href="#admin">Administrative Operations</a>
-
 <a href="#project">Project Coordination</a>
-
 <a href="#canva">Canva Design</a>
-
 <a href="#contact">Contact</a>
 
 </nav>
@@ -67,14 +65,13 @@ social media support, project coordination, and Canva design work.
 
 <main class="container">
 
+<!-- KAJABI -->
+
 <section id="kajabi">
 
 <div class="section-title">
-
 <h2>Kajabi Website Management</h2>
-
 <span>4 Projects</span>
-
 </div>
 
 <div class="grid">
@@ -107,42 +104,40 @@ social media support, project coordination, and Canva design work.
 
 </section>
 
+<!-- SOCIAL -->
+
 <section id="social">
 
 <div class="section-title">
-
 <h2>Social Media Support</h2>
-
 <span>6 Projects</span>
-
 </div>
 
 <div class="grid">
 
 <div class="card"><img src="https://placehold.co/800x600/F5F3EF/B39257?text=Content+Calendar"><h3>Content Calendar</h3></div>
 
-<div class="card"><img src="https://placehold.co/800x600/F5F3EF/B39257?text=Scheduling"><h3>Scheduling</h3></div>
+<div class="card"><img src="https://placehold.co/800x600/F5F3EF/B39257?text=Scheduling"><h3>Content Scheduling</h3></div>
 
 <div class="card"><img src="https://placehold.co/800x600/F5F3EF/B39257?text=Analytics"><h3>Analytics</h3></div>
 
-<div class="card"><img src="https://placehold.co/800x600/F5F3EF/B39257?text=Workflow"><h3>Workflow</h3></div>
+<div class="card"><img src="https://placehold.co/800x600/F5F3EF/B39257?text=Workflow"><h3>Workflow Creation</h3></div>
 
 <div class="card"><img src="https://placehold.co/800x600/F5F3EF/B39257?text=Brand+Support"><h3>Brand Support</h3></div>
 
-<div class="card"><img src="https://placehold.co/800x600/F5F3EF/B39257?text=Reporting"><h3>Reporting</h3></div>
+<div class="card"><img src="https://placehold.co/800x600/F5F3EF/B39257?text=Reporting"><h3>Monthly Reports</h3></div>
 
 </div>
 
 </section>
 
+<!-- ADMIN -->
+
 <section id="admin">
 
 <div class="section-title">
-
 <h2>Administrative Operations</h2>
-
 <span>5 Projects</span>
-
 </div>
 
 <div class="grid">
@@ -161,14 +156,13 @@ social media support, project coordination, and Canva design work.
 
 </section>
 
+<!-- PROJECT -->
+
 <section id="project">
 
 <div class="section-title">
-
 <h2>Project Coordination</h2>
-
 <span>3 Projects</span>
-
 </div>
 
 <div class="grid">
@@ -183,14 +177,13 @@ social media support, project coordination, and Canva design work.
 
 </section>
 
+<!-- CANVA -->
+
 <section id="canva">
 
 <div class="section-title">
-
 <h2>Canva Design</h2>
-
 <span>8 Projects</span>
-
 </div>
 
 <div class="grid">
@@ -209,4 +202,87 @@ social media support, project coordination, and Canva design work.
 
 <div class="card"><img src="https://placehold.co/800x600/F5F3EF/B39257?text=Digital+Asset"><h3>Digital Assets</h3></div>
 
-<div class="card"><img src="https://placehold.co/
+<div class="card"><img src="https://placehold.co/800x600/F5F3EF/B39257?text=Brand+Kit"><h3>Brand Kit</h3></div>
+
+</div>
+
+</section>
+
+</main>
+
+<!-- CONTACT -->
+
+<section class="cta" id="contact">
+
+<div class="container">
+
+<h2>Let's Work Together</h2>
+
+<p>
+Ready to simplify your operations and elevate your business? Let's connect.
+</p>
+
+<div class="buttons">
+
+<a href="mailto:necesariojudyann5@gmail.com">
+<i class="fas fa-envelope"></i>
+<span>Email</span>
+</a>
+
+<a href="https://www.linkedin.com/in/judy-ann-necesario-virtual-assistant/" target="_blank">
+<i class="fab fa-linkedin"></i>
+<span>LinkedIn</span>
+</a>
+
+<a href="#" target="_blank">
+<i class="fab fa-facebook-f"></i>
+<span>Facebook</span>
+</a>
+
+<a href="#" target="_blank">
+<i class="fab fa-instagram"></i>
+<span>Instagram</span>
+</a>
+
+<a href="#" target="_blank">
+<i class="fa-brands fa-threads"></i>
+<span>Threads</span>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Judy Ann Necesario — Administrative & Operations Virtual Assistant</p>
+
+</footer>
+
+<script>
+
+const menuToggle=document.getElementById("menuToggle");
+const mobileMenu=document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click",()=>{
+
+mobileMenu.classList.toggle("show");
+
+});
+
+document.querySelectorAll("#mobileMenu a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+mobileMenu.classList.remove("show");
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
