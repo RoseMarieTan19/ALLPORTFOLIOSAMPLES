@@ -1,8 +1,8 @@
-/* ==========================
-   JUDY ANN NECESARIO
-   Portfolio Library
+/* ===============================
+   PORTFOLIO LIBRARY
+   Judy Ann Necesario
    Matches Main Portfolio
-========================== */
+================================ */
 
 :root{
 
@@ -13,25 +13,16 @@
 --black:#080808;
 --cream:#F8F5F0;
 --white:#FFFFFF;
---text:#3C3C3C;
+--text:#404040;
 
---shadow:0 12px 35px rgba(0,0,0,.12);
---transition:.35s ease;
+--shadow:0 18px 45px rgba(0,0,0,.12);
 
 }
 
 *{
-
 margin:0;
 padding:0;
 box-sizing:border-box;
-
-}
-
-html{
-
-scroll-behavior:smooth;
-
 }
 
 body{
@@ -43,7 +34,7 @@ line-height:1.8;
 
 }
 
-.container{
+.library-container{
 
 width:min(1180px,92%);
 margin:auto;
@@ -56,23 +47,23 @@ margin:auto;
 
 position:sticky;
 top:0;
-z-index:999;
 background:rgba(0,0,0,.94);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
 border-bottom:1px solid rgba(192,138,42,.25);
+z-index:999;
 
 }
 
-.library-header .container{
+.library-header .library-container{
 
-height:82px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+height:82px;
 
 }
 
-.logo{
+.library-logo{
 
 display:flex;
 align-items:center;
@@ -82,7 +73,7 @@ color:white;
 
 }
 
-.logo-box{
+.library-logo-box{
 
 width:46px;
 height:46px;
@@ -95,7 +86,7 @@ color:var(--gold);
 
 }
 
-.logo-text h2{
+.library-logo-text h2{
 
 font-family:'Cormorant Garamond',serif;
 font-size:22px;
@@ -103,147 +94,143 @@ font-weight:500;
 
 }
 
-.logo-text span{
+.library-logo-text p{
 
 font-size:12px;
 color:#CFCFCF;
 
 }
 
-.back-btn{
+.library-back{
 
 color:var(--gold);
 text-decoration:none;
-font-size:14px;
 display:flex;
 align-items:center;
 gap:8px;
+font-size:14px;
 
 }
 
 /* HERO */
 
-.portfolio-library{
+.library-hero{
 
-padding:90px 0 110px;
+padding:100px 0;
 
 }
 
-.title-area{
+.library-title{
 
+text-align:center;
 max-width:760px;
 margin:auto auto 70px;
-text-align:center;
 
 }
 
-.eyebrow{
+.library-title span{
 
 color:var(--gold);
-letter-spacing:3px;
-text-transform:uppercase;
 font-size:.82rem;
+letter-spacing:3px;
 font-weight:600;
 
 }
 
-.title-area h1{
+.library-title h1{
 
 font-family:'Cormorant Garamond',serif;
 font-size:64px;
 line-height:1;
+margin:18px 0;
 color:#171717;
-margin:20px 0;
 
 }
 
-.gold-line{
+.library-line{
 
-width:72px;
+width:70px;
 height:3px;
 background:var(--gold);
 margin:22px auto;
 
 }
 
-.title-area p{
+.library-title p{
 
-font-size:16px;
 color:#666;
 
 }
 
 /* GRID */
 
-.portfolio-grid{
+.library-grid{
 
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:30px;
+gap:32px;
 
 }
 
 /* CARD */
 
-.card{
+.library-card{
 
-background:var(--white);
-border-radius:20px;
+background:white;
+border-radius:22px;
 overflow:hidden;
 text-decoration:none;
 color:inherit;
 box-shadow:var(--shadow);
-transition:var(--transition);
+transition:.35s;
 border:1px solid rgba(192,138,42,.12);
 display:flex;
 flex-direction:column;
 
 }
 
-.card:hover{
+.library-card:hover{
 
 transform:translateY(-10px);
-box-shadow:0 25px 50px rgba(0,0,0,.18);
 
 }
 
-.image{
+.library-image{
 
 position:relative;
 overflow:hidden;
 
 }
 
-.image img{
+.library-image img{
 
 width:100%;
-height:220px;
+height:230px;
 object-fit:cover;
-transition:.6s;
+transition:.5s;
 
 }
 
-.card:hover img{
+.library-card:hover img{
 
 transform:scale(1.08);
 
 }
 
-.badge{
+.library-badge{
 
 position:absolute;
 top:18px;
 right:18px;
-background:rgba(8,8,8,.92);
+background:#111;
 color:white;
-padding:8px 15px;
+padding:8px 16px;
 border-radius:999px;
 font-size:.76rem;
-font-weight:600;
 
 }
 
-.content{
+.library-content{
 
 padding:30px;
 display:flex;
@@ -252,50 +239,50 @@ flex:1;
 
 }
 
-.icon{
+.library-icon{
 
 width:60px;
 height:60px;
-border-radius:18px;
-display:grid;
-place-items:center;
 background:rgba(192,138,42,.12);
 color:var(--gold);
+display:grid;
+place-items:center;
+border-radius:18px;
 font-size:24px;
 margin-bottom:22px;
 
 }
 
-.content h3{
+.library-content h3{
 
 font-family:'Cormorant Garamond',serif;
 font-size:34px;
 line-height:1.15;
-margin-bottom:14px;
+margin-bottom:12px;
 color:#171717;
 
 }
 
-.content p{
+.library-content p{
 
 color:#666;
 margin-bottom:auto;
 
 }
 
-.view{
+.library-view{
 
-margin-top:28px;
-display:inline-flex;
+margin-top:26px;
+display:flex;
 align-items:center;
 gap:10px;
 font-weight:600;
 color:var(--gold);
-transition:var(--transition);
+transition:.3s;
 
 }
 
-.card:hover .view{
+.library-card:hover .library-view{
 
 gap:18px;
 
@@ -303,36 +290,28 @@ gap:18px;
 
 /* CTA */
 
-.cta-area{
+.library-cta{
 
-margin-top:70px;
 text-align:center;
+margin-top:70px;
 
 }
 
-.btn{
+.library-btn{
 
 display:inline-flex;
 align-items:center;
 gap:12px;
 padding:16px 34px;
-border-radius:999px;
-text-decoration:none;
-transition:var(--transition);
-font-size:14px;
-font-weight:500;
-
-}
-
-.btn.gold{
-
 background:var(--gold);
 color:white;
-box-shadow:0 8px 25px rgba(192,138,42,.35);
+text-decoration:none;
+border-radius:999px;
+transition:.35s;
 
 }
 
-.btn.gold:hover{
+.library-btn:hover{
 
 background:var(--gold-dark);
 transform:translateY(-4px);
@@ -341,15 +320,15 @@ transform:translateY(-4px);
 
 /* FOOTER */
 
-footer{
+.library-footer{
 
 background:black;
 padding:28px 0;
-color:#BEBEBE;
+margin-top:80px;
 
 }
 
-.footer-content{
+.library-footer .library-container{
 
 display:flex;
 justify-content:space-between;
@@ -359,7 +338,13 @@ gap:20px;
 
 }
 
-.top-link{
+.library-footer p{
+
+color:#BEBEBE;
+
+}
+
+.library-footer a{
 
 color:var(--gold);
 text-decoration:none;
@@ -370,40 +355,28 @@ text-decoration:none;
 
 @media(max-width:768px){
 
-.library-header .container{
+.library-header .library-container{
 
 height:auto;
 padding:18px 0;
 flex-direction:column;
-gap:16px;
+gap:18px;
 
 }
 
-.title-area h1{
+.library-title h1{
 
 font-size:46px;
 
 }
 
-.portfolio-library{
-
-padding:70px 0 90px;
-
-}
-
-.portfolio-grid{
+.library-grid{
 
 grid-template-columns:1fr;
 
 }
 
-.content h3{
-
-font-size:30px;
-
-}
-
-.footer-content{
+.library-footer .library-container{
 
 justify-content:center;
 text-align:center;
