@@ -258,22 +258,20 @@ Ready to simplify your operations and elevate your business? Let's connect.
 
 <script>
 
-const menuToggle=document.getElementById("menuToggle");
-const mobileMenu=document.getElementById("mobileMenu");
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
 
-menuToggle.addEventListener("click",()=>{
-
-mobileMenu.classList.toggle("show");
-
+menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("show");
 });
 
-document.querySelectorAll("#mobileMenu a").forEach(link=>{
+document.querySelectorAll("#mobileMenu a").forEach(link => {
 
-link.addEventListener("click",()=>{
+    link.addEventListener("click", () => {
 
-mobileMenu.classList.remove("show");
+        mobileMenu.classList.remove("show");
 
-});
+    });
 
 });
 
